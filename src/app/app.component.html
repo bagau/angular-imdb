@@ -1,0 +1,6 @@
+<h2>Search film by title:</h2>
+
+<input type="text" [(ngModel)]="title">
+<button (click)="searchMovie()">Search</button>
+
+<div *ngFor="let item of movie?.Search">{{item.Title}} - {{item.Year}}</div>
