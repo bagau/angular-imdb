@@ -1,0 +1,28 @@
+<h3>Search film by title:</h3>
+
+<form class="search-form">
+  <input class="search-form__input" type="text" name="search-input" [(ngModel)]="searchInput">
+  <button type="submit" class="search-form__btn" (click)="searchMovies()">Search</button>
+</form>
+
+<table class="result-table" *ngIf="movies !== undefined && movies.Search !== undefined && movies.Search.length > 0">
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let item of movies?.Search">
+    <td>{{item.Title}}</td>
+    <td>{{item.Year}}</td>
+    <td><a [routerLink]="['movie-info', item.imdbID]">View more</a></td>
+    <td>
+      <div *ngIf="isSaved(item.imdbID); else other_content">
+        <button (click)="addMovie(item)">Add to My movies</button>
+      </div>
+      <ng-template #other_content>Added</ng-template>
+    </td>
+  </tr>
+</table>
+
+<div *ngIf="movies !== undefined && movies.Response !== undefined && movies.Response === 'False'">Movies not found!</div>

@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #eeeeee;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  background: #fff;
+}
+
+.navigation {
+  margin-bottom: 50px;
+}
+
+.navigation a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 25px;
+  margin-right: 10px;
+  border: 1px solid #777;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #333;
+  background: #fff;
+}
+
+.navigation a:hover {
+  background: #eee;
+  text-decoration: none;
+}
+
+
+.search-form {
+  margin-bottom: 25px;
+}
+
+.search-form__input,
+.search-form__btn {
+  height: 25px;
+}
+
+.search-form__input {
+  margin-right: 5px;
+}
+
+
+.result-table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid #999;
+}
+
+.result-table th {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.result-table td {
+  padding: 5px 15px;
+}
+
