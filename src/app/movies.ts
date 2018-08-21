@@ -1,9 +1,11 @@
 export class Movies {
-  Search: [{
+  Search?: [{
     Poster: string,
     Title: string,
     Type: string,
     Year: string,
     imdbID: string
   }];
+  Error?: string;
+  Response?: string;
 }
